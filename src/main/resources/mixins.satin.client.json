@@ -15,7 +15,6 @@
     "gl.CustomFormatPostEffectProcessorMixin",
     "gl.DepthGlFramebufferMixin",
     "gl.GlUniformMixin",
-    "gl.JsonEffectGlShaderMixin",
     "render.RenderLayerAccessor",
     "render.RenderLayerMixin",
     "render.RenderLayerMixin$MultiPhaseParametersAccessor",
