@@ -26,6 +26,8 @@
   },
   "client": [
     "event.ShaderLoaderMixin",
+    "gl.ShaderLoaderMixin",
+    "render.GameRendererAccessor",
     "render.WorldRendererMixin"
   ]
 }
