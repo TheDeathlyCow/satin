@@ -19,8 +19,10 @@ package org.ladysnake.satin.api.event;
 
 import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.EventFactory;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.GraphicsMode;
 import net.minecraft.client.render.Camera;
+import org.ladysnake.satin.api.experimental.ReadableDepthFramebuffer;
 
 /**
  * @see PostWorldRenderCallbackV2
@@ -40,6 +42,7 @@ public interface PostWorldRenderCallback {
     @Deprecated
     Event<PostWorldRenderCallback> EVENT = EventFactory.createArrayBacked(PostWorldRenderCallback.class,
             (listeners) -> (camera, tickDelta) -> {
+                ((ReadableDepthFramebuffer) MinecraftClient.getInstance().getFramebuffer()).freezeDepthMap();
                 for (PostWorldRenderCallback handler : listeners) {
                     handler.onWorldRendered(camera, tickDelta);
                 }
