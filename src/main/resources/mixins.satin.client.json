@@ -9,7 +9,6 @@
     "blockrenderlayer.WorldRendererMixin",
     "event.GameRendererMixin",
     "event.MinecraftClientMixin",
-    "event.WorldRendererMixin",
     "gl.CoreShaderMixin",
     "gl.CustomFormatFramebufferMixin",
     "gl.CustomFormatPostEffectProcessorMixin",

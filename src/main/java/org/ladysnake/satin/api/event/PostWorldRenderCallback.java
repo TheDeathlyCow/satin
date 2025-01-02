@@ -33,7 +33,11 @@ public interface PostWorldRenderCallback {
      *
      * <p>{@link net.minecraft.client.gl.PostEffectProcessor}s <strong>must not</strong> be rendered in this callback, as they will prevent
      * {@link GraphicsMode#FABULOUS fabulous graphics} and other effects from working properly.
+     *
+     * @deprecated  {@link net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents#LAST} is equivalent to this
+     * event
      */
+    @Deprecated
     Event<PostWorldRenderCallback> EVENT = EventFactory.createArrayBacked(PostWorldRenderCallback.class,
             (listeners) -> (camera, tickDelta) -> {
                 for (PostWorldRenderCallback handler : listeners) {
